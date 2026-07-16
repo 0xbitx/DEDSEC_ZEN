@@ -312,7 +312,6 @@ std::string json_get_str(const std::string& json, const std::string& key, size_t
         return val;
     }
     if (json[p] == 'n' && json.substr(p, 4) == "null") return "";
-    // Number
     size_t e = p;
     while (e < json.size() && (json[e] == '-' || (json[e] >= '0' && json[e] <= '9'))) ++e;
     return json.substr(p, e - p);
